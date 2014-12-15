@@ -1,0 +1,36 @@
+// main: ../main.less
+.itemCatalogMixin(){
+    .item{
+        display: inline-block;
+        width: 205px;
+        text-align: center;
+        padding-right: 63px;
+        margin-bottom: 30px;
+        .img{
+            display: block;
+            text-align: center;
+            overflow: hidden;
+            background: #fff;
+            border: 1px solid #eaeaea;
+            .figureMixin();
+            img{
+                border: none;
+                width: 205px;
+            }
+        }
+        .title{
+            color: #b2b2b2;
+            font-size: 18px;
+            margin-top: 12px;
+            display: block;
+            span{color:#102d37;}
+        }
+    }
+}
+#catalog-items{
+    margin-top: 30px;
+    .itemCatalogMixin();
+    .item:nth-child(3n + 3){
+            padding: 0;
+        }
+}

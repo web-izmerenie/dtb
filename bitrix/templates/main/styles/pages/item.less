@@ -1,0 +1,61 @@
+// main: ../main.less
+@import "../main.less";
+
+#item{
+    margin-top: 30px;
+    #preview{
+        margin-bottom: 30px;
+        #detail-pic{
+            background: #fefefe;
+            display: table-cell;
+            .figureMixin();
+            width: 250px;
+            border: 1px solid #ededed;
+            img{
+                border: none;
+                width: 250px;
+            }
+        }
+        #text{
+            display: table-cell;
+            vertical-align: middle;
+            padding-left: 20px;
+            color:#232323;
+            font-size: 15px;
+            h1{
+                color: #2a5d6b;
+                font-size: 22px;
+                margin-bottom: 12px;
+            }
+        }
+    }
+    .tabs{
+        color: #232323;
+        font-size: 15px;
+        .tabs-control{
+            list-style: none;
+            margin-bottom: 30px;
+            li{
+                display: inline-block;
+                color:#102d37;
+                font-size: 15px;
+                border-bottom: 1px dashed #dbdbdb;
+                margin-right: 25px;
+                cursor: pointer;
+                &:last-child{margin: 0;}
+            }
+            .active{
+                .activeMenuMixin();
+                border-color: #a2bec9;
+                padding: 4px 10px;
+                margin-right: 20px;
+            }
+        }
+        .box{
+            display: none;
+        }
+        .visible{
+                display: block;
+            }
+    }
+}

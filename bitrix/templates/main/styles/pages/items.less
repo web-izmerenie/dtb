@@ -1,0 +1,54 @@
+// main: ../main.less
+@import "catalog-items.less";
+
+#filter{
+    background: #dfeff3;
+    padding: 17px 20px;
+    border-radius: 9px;
+    ul{
+        list-style: none;
+        li{
+            display: inline-block;
+            padding-right: 28px;
+            &:last-child{
+                padding: 0;
+            }
+            a{
+                color:#2a5d6b;
+                text-decoration: none;
+                border-bottom: 1px solid #bbd2d8;
+                padding-bottom: 3px;
+            }
+           
+        }
+         .active{
+             padding-right: 18px;
+                a{
+                    .activeMenuMixin();
+                    border-color: #56bcd6;
+                    padding: 6px 14px;
+                }
+            }
+    }
+}
+#items{
+    margin-top: 20px;
+    .itemCatalogMixin();
+    .item{
+        padding-right: 50px;
+        width: 145px;
+        &:nth-child(4n +4){
+            padding: 0;
+        }
+        .img{
+            img{
+                width: 145px;
+                border: none;
+            }
+        }
+        .title{
+            font-size: 15px;
+            margin-top: 20px;
+        }
+    }
+}
