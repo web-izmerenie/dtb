@@ -79,4 +79,5 @@ bitrix/updates
 upload
 
 #config
-/var/www/dtb/data/www/dev-andrey.dtb.ru/bitrix/php_interface/dbconn.php
+bitrix/php_interface/dbconn.php
+bitrix/.settings.php

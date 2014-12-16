@@ -7,4 +7,5 @@
         </p>
     </section>
 </main>
+<!-- .content -->
 <?require($_SERVER[ "DOCUMENT_ROOT"]. "/bitrix/footer.php");?>
