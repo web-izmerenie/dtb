@@ -1,4 +1,6 @@
-
+<?if(defined("SIDEBAR") && $page != '/'){?>
+    </section>
+<?}?>
  </main>
 </div>
 <!-- .wrapper -->
