@@ -78,6 +78,3 @@ bitrix/updates
 # upload dir
 upload
 
-#config
-bitrix/php_interface/dbconn.php
-bitrix/.settings.php

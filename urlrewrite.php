@@ -1,22 +1,17 @@
 <?
 $arUrlRewrite = array(
 	array(
-		"CONDITION" => "#^/optovikam/#",
-		"RULE" => "",
-		"ID" => "bitrix:catalog",
-		"PATH" => "/optovikam/index.php",
+		"CONDITION" => "#^/katalog/(.+?)/(.+?).html(\\?|\$)#",
+		"RULE" => "ELEMENT_CODE=\$2&",
+		"ID" => "",
+		"PATH" => "/katalog/detail.php",
 	),
 	array(
-		"CONDITION" => "#^/news/#",
-		"RULE" => "",
-		"ID" => "bitrix:news",
-		"PATH" => "/news/index.php",
-	),
-	array(
-		"CONDITION" => "#^/#",
-		"RULE" => "",
-		"ID" => "bitrix:catalog",
-		"PATH" => "/index.php",
+		"CONDITION" => "#^/katalog/(.+?)/(\\?|\$)#",
+		"RULE" => "SECTION_CODE=\$1&",
+		"ID" => "",
+		"PATH" => "/katalog/index.php",
+		"SORT" => "100",
 	),
 );
 

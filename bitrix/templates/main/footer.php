@@ -1,4 +1,4 @@
-<?if(defined("SIDEBAR") && $page != '/'){?>
+<?if(defined("SIDEBAR")){?>
     </section>
 <?}?>
  </main>
