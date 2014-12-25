@@ -9,10 +9,10 @@ $(document).ready(function () {
 
     function leftMenu() {
         $(".left-menu > .open > .inside-menu").show();
-        $(".left-menu > li").click(function () {
+        $(".left-menu > ul > li").click(function () {
             if (!$(this).hasClass("open")) {
                 $(".left-menu .inside-menu").slideUp(500);
-                $(".left-menu > li").removeClass("open");
+                $(".left-menu > ul > li").removeClass("open");
                 $(this).find('ul').slideDown(500);
                 $(this).addClass("open");
             }
@@ -28,5 +28,4 @@ $(document).ready(function () {
     tabs();
     leftMenu();
     topMenuSize();
-    activeMenu();
 });
