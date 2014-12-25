@@ -7,17 +7,6 @@ $(document).ready(function () {
         $(".header nav").width(full_weight);
     }
 
-    function activeMenu() {
-        var UrlBrow = location.pathname;
-        var topMenuLink = $(".header nav li a");
-        topMenuLink.each(function () {
-            if ($(this).attr("href") == UrlBrow) {
-                $(".header nav li a:first").removeClass("active");
-                $(this).addClass("active");
-            }
-        });
-    }
-
     function leftMenu() {
         $(".left-menu > .open > .inside-menu").show();
         $(".left-menu > li").click(function () {
