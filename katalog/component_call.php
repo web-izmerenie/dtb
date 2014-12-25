@@ -7,7 +7,7 @@
 	"COUNT_ELEMENTS" => "Y",
 	"TOP_DEPTH" => "3",
 	"SECTION_FIELDS" => array(
-		0 => "",
+		0 => "PICTURE",
 		1 => "",
 	),
 	"SECTION_USER_FIELDS" => array(

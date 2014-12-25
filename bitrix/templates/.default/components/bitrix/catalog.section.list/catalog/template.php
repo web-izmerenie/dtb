@@ -10,7 +10,7 @@
                     <a href="<?=$arItem2['SECTION_PAGE_URL'];?>">
                         <span class="catalog-img-prev">
                             <?if (!empty($arItem2['PICTURE']['SRC'])){?>
-                            <img src="<?=($arItem2['BIG_ELEMENT'] == 1) ? $big_photo['src'] : $catalog_photo['src']?>">
+                                <img src="<?=($arItem2['BIG_ELEMENT'] == 1) ? $big_photo['src'] : $catalog_photo['src']?>">
                             <?}?>
                         </span>
                         <span class="title"><span><?=$arItem2['NAME'];?></span>
@@ -22,11 +22,21 @@
 
 <?}else{?>
 
-    <?foreach ($arResult['SECTIONS'] as $arItem2){?>
-        <div class="catalog-element <?if ($arItem2['BIG_ELEMENT'] == 1){?>big-element<?}?>">
-            <a class="title" href="<?=$arItem2['SECTION_PAGE_URL'];?>"><span><?=$arItem2['NAME'];?></span></a>
+        <div id="catalog-items">
+            <?foreach ($arResult['SECTIONS'] as $arItem3){?>
+            <?$catalog_inner_photo = CFile::ResizeImageGet($arItem3['PICTURE'], array('width'=>205, 'height'=>205), BX_RESIZE_IMAGE_PROPORTIONAL, true);?>
+                <div class="item">
+                    <a href="<?=$arItem3['SECTION_PAGE_URL'];?>">
+                        <span class="img">
+                            <?if (!empty($arItem3['PICTURE']['SRC'])){?>
+                                <img src="<?=$catalog_inner_photo['src']?>">
+                            <?}?>
+                        </span>
+                        <span class="title"><span><?=$arItem3['NAME'];?></span>
+                    </a>
+                </div>
+            <?}?>
         </div>
-    <?}?>
 <?}?>
 
 <?if ($arResult['SECTION']['ELEMENT_CNT'] > 0){
