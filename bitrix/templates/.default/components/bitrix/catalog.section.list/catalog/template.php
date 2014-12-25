@@ -22,7 +22,9 @@
 
 <?}else{?>
 
-        <div id="catalog-items">
+        <?if ($arResult['SECTION']['ELEMENT_CNT'] != 0){?>
+            <div id="catalog-items">
+        <?}?>
             <?foreach ($arResult['SECTIONS'] as $arItem3){?>
             <?$catalog_inner_photo = CFile::ResizeImageGet($arItem3['PICTURE'], array('width'=>205, 'height'=>205), BX_RESIZE_IMAGE_PROPORTIONAL, true);?>
                 <div class="item">
@@ -36,7 +38,10 @@
                     </a>
                 </div>
             <?}?>
-        </div>
+        <?if ($arResult['SECTION']['ELEMENT_CNT'] != 0){?>
+            </div>
+         <?}?>
+
 <?}?>
 
 <?if ($arResult['SECTION']['ELEMENT_CNT'] > 0){
