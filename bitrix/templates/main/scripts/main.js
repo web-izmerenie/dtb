@@ -8,7 +8,7 @@ $(document).ready(function () {
     }
 
     function leftMenu() {
-        $(".left-menu > .open > .inside-menu").show();
+        $(".left-menu > ul > .open > .inside-menu").show();
         $(".left-menu > ul > li").click(function () {
             if (!$(this).hasClass("open")) {
                 $(".left-menu .inside-menu").slideUp(500);

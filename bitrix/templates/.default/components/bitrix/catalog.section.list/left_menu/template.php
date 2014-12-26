@@ -1,11 +1,14 @@
 <?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();?>
+<pre>
+    <?#print_r($arResult['SECTIONS']);?>
+</pre>
 <nav class="left-menu">
     <ul>
         <?foreach($arResult['SECTIONS'] as $arItem){?>
-            <li><a href="javascript:void(0);"><span><?=$arItem['NAME'];?></span></a>
+            <li <?if(isset($arItem['ACTIVE_LINK'])){?>class="open"<?}?>><a href="javascript:void(0);"><span><?=$arItem['NAME'];?></span></a>
                 <ul class="inside-menu">
                     <?foreach($arItem['CHILDREN'] as $arItem2){?>
-                    <li><a href="<?=$arItem2['SECTION_PAGE_URL'];?>"><span><?=$arItem2['NAME']?></span></a></li>
+                    <li><a <?if(isset($arItem2['ACTIVE_LINK'])){?>class="active"<?}?> href="<?=$arItem2['SECTION_PAGE_URL'];?>"><span><?=$arItem2['NAME']?></span></a></li>
                     <?}?>
                 </ul>
             </li>

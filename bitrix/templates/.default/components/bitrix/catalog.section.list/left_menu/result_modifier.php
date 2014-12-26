@@ -14,15 +14,14 @@ $newList = array();
                     $arItem2['IBLOCK_SECTION_ID'] != $arItem1['ID']
                 ) continue;
 
-                /*
-                if (stripos($arItem2['SECTION_PAGE_URL'], %URL_PATHNAME%) === 0) {
-                    $arItem1['ACTIVE'] = true;
-                    $arItem2['ACTIVE'] = true;
+                if (stripos($arItem2['SECTION_PAGE_URL'], $_SERVER['REQUEST_URI']) === 0) {
+                    $arItem1['ACTIVE_LINK'] = true;
+                    $arItem2['ACTIVE_LINK'] = true;
                 }
-                if ($arItem2['SECTION_PAGE_URL'] === %URL_PATHNAME%) {
-                    $arItem2['CURRENT'] = true;
+
+                if ($arItem2['SECTION_PAGE_URL'] === $_SERVER['REQUEST_URI']) {
+                    $arItem2['CURRENT_LINK'] = true;
                 }
-                */
 
                 $arItem2['CHILDREN'] = array();
 
