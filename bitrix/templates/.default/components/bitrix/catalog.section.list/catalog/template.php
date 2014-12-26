@@ -46,25 +46,9 @@
 
 <?if ($arResult['SECTIONS_COUNT'] == 0){
 
-    $APPLICATION->IncludeComponent(
-        "bitrix:catalog.filter",
-        "catalog_filter",
-    Array(
-        "IBLOCK_TYPE" => "dtb",
-        "IBLOCK_ID" => "3",
-        "FILTER_NAME" => "arrFilter",
-        "FIELD_CODE" => array(0=>"",1=>"",),
-        "PROPERTY_CODE" => array(0=>"ATT_WEIGHT",1=>"",),
-        "LIST_HEIGHT" => "5",
-        "TEXT_WIDTH" => "20",
-        "NUMBER_WIDTH" => "5",
-        "CACHE_TYPE" => "A",
-        "CACHE_TIME" => "36000000",
-        "CACHE_GROUPS" => "Y",
-        "SAVE_IN_SESSION" => "N",
-        "PRICE_CODE" => ""
-    )
-    );
+    $weight = $_GET['WEIGHT'];
+    GLOBAL $arrFilter;
+    $arrFilter = array('PROPERTY_3' => $weight);
 
     $APPLICATION->IncludeComponent(
         "bitrix:catalog.section",
@@ -84,7 +68,7 @@
             "SHOW_ALL_WO_SECTION" => "N",
             "PAGE_ELEMENT_COUNT" => "30",
             "LINE_ELEMENT_COUNT" => "",
-            "PROPERTY_CODE" => array(0=>"",1=>"",),
+            "PROPERTY_CODE" => array("ATT_WEIGHT", ""),
             "OFFERS_LIMIT" => "5",
             "TEMPLATE_THEME" => "",
             "ADD_PICT_PROP" => "-",
