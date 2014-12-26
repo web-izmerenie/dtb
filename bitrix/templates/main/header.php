@@ -1,9 +1,15 @@
 <?php $tplPath="/bitrix/templates/main/" ;
-$page = $APPLICATION->GetCurPage();?>
+if(CSite::InDir('/katalog/')) {
+    $level_breadcrumb = "2";
+}else{
+    $level_breadcrumb = "0";
+}
+?>
 <!DOCTYPE html>
 <html class="main">
 <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
     <title>
         <?$APPLICATION->ShowTitle()?></title>
@@ -77,7 +83,7 @@ $page = $APPLICATION->GetCurPage();?>
 	"bitrix:breadcrumb",
 	"catalog_breadcumb",
 	Array(
-		"START_FROM" => "2",
+		"START_FROM" => $level_breadcrumb,
 		"PATH" => "",
 		"SITE_ID" => "s1"
 	)

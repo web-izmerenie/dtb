@@ -44,7 +44,28 @@
 
 <?}?>
 
-<?if ($arResult['SECTION']['ELEMENT_CNT'] > 0){
+<?if ($arResult['SECTIONS_COUNT'] == 0){
+
+    $APPLICATION->IncludeComponent(
+        "bitrix:catalog.filter",
+        "catalog_filter",
+    Array(
+        "IBLOCK_TYPE" => "dtb",
+        "IBLOCK_ID" => "3",
+        "FILTER_NAME" => "arrFilter",
+        "FIELD_CODE" => array(0=>"",1=>"",),
+        "PROPERTY_CODE" => array(0=>"ATT_WEIGHT",1=>"",),
+        "LIST_HEIGHT" => "5",
+        "TEXT_WIDTH" => "20",
+        "NUMBER_WIDTH" => "5",
+        "CACHE_TYPE" => "A",
+        "CACHE_TIME" => "36000000",
+        "CACHE_GROUPS" => "Y",
+        "SAVE_IN_SESSION" => "N",
+        "PRICE_CODE" => ""
+    )
+    );
+
     $APPLICATION->IncludeComponent(
         "bitrix:catalog.section",
         "items",
