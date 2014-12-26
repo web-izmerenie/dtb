@@ -42,5 +42,4 @@ $APPLICATION->SetTitle("ДТБ");
 		"AJAX_OPTION_ADDITIONAL" => ""
 	)
 );?>
-<?$APPLICATION->IncludeFile("/katalog/component_call.php");?>
-<?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
+<?$APPLICATION->IncludeFile("/katalog/component_call.php");?><br><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

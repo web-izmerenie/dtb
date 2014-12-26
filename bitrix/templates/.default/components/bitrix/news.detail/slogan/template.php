@@ -1,7 +1,4 @@
 <?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();?>
-<?$uri = $APPLICATION->GetCurUri();
-if($uri == '/'){
-?>
 <div id="sales-slog">
 	<?if($arParams["DISPLAY_PICTURE"]!="N" && is_array($arResult["DETAIL_PICTURE"])):?>
 		<img
@@ -82,4 +79,3 @@ if($uri == '/'){
 	}
 	?>
 </div>
-<?}?>

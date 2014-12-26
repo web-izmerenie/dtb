@@ -73,4 +73,12 @@ $page = $APPLICATION->GetCurPage();?>
             </aside>
             <section class="content-in-sidebar">
 <?}?>
-
+<?$APPLICATION->IncludeComponent(
+	"bitrix:breadcrumb",
+	"catalog_breadcumb",
+	Array(
+		"START_FROM" => "2",
+		"PATH" => "",
+		"SITE_ID" => "s1"
+	)
+);?>

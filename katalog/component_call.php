@@ -18,7 +18,7 @@
 	"CACHE_TYPE" => "A",
 	"CACHE_TIME" => "36000000",
 	"CACHE_GROUPS" => "Y",
-	"ADD_SECTIONS_CHAIN" => "N"
+	"ADD_SECTIONS_CHAIN" => "Y"
 	),
 	false
 );?>
