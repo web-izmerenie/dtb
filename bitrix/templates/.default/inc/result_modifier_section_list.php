@@ -1,4 +1,8 @@
 <?if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true) die();
+/**
+* @author Andrey Chechkin
+* @author Viacheslav Lotsmanov
+*/
 
 foreach($arResult["SECTIONS"] as $key => $arSection){
     $arUF = $GLOBALS["USER_FIELD_MANAGER"]->GetUserFields("IBLOCK_3_SECTION",$arSection['ID'],"UF_BIG_ELEMENT");
@@ -56,7 +60,7 @@ if(!$_GET['SECTION_CODE']){
         $newList[] = $arItem1;
     }
 }else{
-        foreach ($arResult['SECTIONS'] as $arItem1) {
+    foreach ($arResult['SECTIONS'] as $arItem1) {
         if ($arItem1['DEPTH_LEVEL'] != 3) continue;
         $newList[] = $arItem1;
     }
