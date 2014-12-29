@@ -68,15 +68,15 @@ if(!$_GET['SECTION_CODE']){
 $arResult['SECTIONS'] = $newList;
 
 $sortCallback = function ($list, &$cb) {
-    uksort($list, function ($a, $b) {
-        return ((int)$a['SORT'] > (int)$b['SORT']) ? -1 : 1;
-    });
-
-    foreach ($list as &$arItem) {
+    $newList = array();
+    foreach ($list as $arItem) {
         if (!empty($arItem['CHILDREN'])) {
             $arItem['CHILDREN'] = $cb($arItem['CHILDREN'], $cb);
         }
+        $sort = (int)$arItem['SORT'];
+        while ($newList[$sort]) $sort += 1;
+        $newList[$sort] = $arItem;
     }
-    return $list;
+    return $newList;
 };
 $arResult['SECTIONS'] = $sortCallback($arResult['SECTIONS'], $sortCallback);
