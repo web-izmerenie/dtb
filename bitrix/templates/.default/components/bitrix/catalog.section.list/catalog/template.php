@@ -48,9 +48,10 @@
 
     $weight = $_GET['WEIGHT'];
     GLOBAL $arrFilter;
-    $arrFilter = array('PROPERTY_3' => $weight);
+    $arrFilter = array('PROPERTY_3' => $weight);?>
 
-    $APPLICATION->IncludeComponent(
+
+    <?$APPLICATION->IncludeComponent(
         "bitrix:catalog.section",
         "items",
         Array(

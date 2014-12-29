@@ -2,6 +2,17 @@
 
 if (!empty($arResult['ITEMS']))
 {?>
+    <div id="filter">
+        <ul>
+            <li><a href="<?$_SERVER['REQUEST_URI']?>?clear_cache=Y">Все</a></li>
+            <?foreach ($arResult['ITEMS'] as $arFilter)
+            {?>
+                <?if (!empty($arFilter['PROPERTIES']['ATT_WEIGHT']['VALUE'])){?>
+                    <li><a href="<?$_SERVER['REQUEST_URI']?>?WEIGHT=<?=$arFilter['PROPERTIES']['ATT_WEIGHT']['VALUE']?>&clear_cache=Y"><?=$arFilter['PROPERTIES']['ATT_WEIGHT']['VALUE']?> кг</a></li>
+                <?}?>
+            <?}?>
+        </ul>
+    </div>
     <div id="items">
     <?foreach ($arResult['ITEMS'] as $key => $arItem)
         {
