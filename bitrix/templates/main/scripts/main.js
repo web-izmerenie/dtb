@@ -29,11 +29,13 @@ $(document).ready(function () {
                 
                 if (!$parLi.hasClass('open')) return;
                 if ($parLi.index() === $li.index()) currentOpen = true;
-                $subUl.slideUp(500, function () { $parLi.removeClass('open'); });
+                $parLi.removeClass('open');
+                $subUl.slideUp(500);
             });
 
             if (!$li.hasClass("open") && !currentOpen) {
-                $subUl.slideDown(500, function () { $li.addClass("open"); });
+                $li.addClass("open");
+                $subUl.slideDown(500);
             }
 
             return false;
