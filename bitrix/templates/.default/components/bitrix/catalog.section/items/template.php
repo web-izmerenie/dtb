@@ -1,18 +1,33 @@
 <?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
 
 if (!empty($arResult['ITEMS']))
-{?>
-    <div id="filter">
+{
+
+$FilterElement = CIBlockElement::GetList(array('PROPERTY_ATT_WEIGHT.VALUE'=>'ASC'), array('IBLOCK_ID'=>3, 'ACTIVE'=>'Y', 'SECTION_CODE'=> $_REQUEST["SECTION_CODE"]), false, false, array('ID', 'PROPERTY_ATT_WEIGHT'));
+
+ while($filter = $FilterElement->Fetch()){
+     $filter_value[] = $filter['PROPERTY_ATT_WEIGHT_VALUE'];
+}
+?>
+
+ <div id="filter">
         <ul>
-            <li><a href="<?$_SERVER['REQUEST_URI']?>?clear_cache=Y">Все</a></li>
-            <?foreach ($arResult['ITEMS'] as $arFilter)
-            {?>
-                <?if (!empty($arFilter['PROPERTIES']['ATT_WEIGHT']['VALUE'])){?>
-                    <li><a href="<?$_SERVER['REQUEST_URI']?>?WEIGHT=<?=$arFilter['PROPERTIES']['ATT_WEIGHT']['VALUE']?>&clear_cache=Y"><?=$arFilter['PROPERTIES']['ATT_WEIGHT']['VALUE']?> кг</a></li>
-                <?}?>
-            <?}?>
+           <?if(empty($_GET['WEIGHT'])):?>
+            <li class="active"><a>Все</a></li>
+            <?else:?>
+            <li><a href="<?=$_SERVER['REDIRECT_URL']?>">Все</a></li>
+            <?endif?>
+            <?foreach ($filter_value as $arFilter):?>
+<?if (empty($arFilter)) continue;?>
+<?if($_GET['WEIGHT'] == $arFilter):?>
+<li class="active"><span><?=$arFilter?> кг</span></li>
+<?else:?>
+<li><a href="?WEIGHT=<?=$arFilter?>"><?=$arFilter?> кг</a></li>
+<?endif?>
+<?endforeach?>
         </ul>
     </div>
+
     <div id="items">
     <?foreach ($arResult['ITEMS'] as $key => $arItem)
         {

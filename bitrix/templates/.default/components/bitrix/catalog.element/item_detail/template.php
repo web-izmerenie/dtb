@@ -5,7 +5,9 @@
 <div id="item">
     <div id="preview">
         <div id="detail-pic">
-            <img src="<?=$photo['src'];?>">
+            <?if (!empty($arResult['DETAIL_PICTURE'])){?>
+                <img src="<?=$photo['src'];?>">
+            <?}?>
         </div>
         <div id="text">
             <h1><?=$arResult['NAME'];?></h1>
