@@ -11,7 +11,7 @@ $(document).ready(function () {
         var $leftMenu = $(".left-menu");
         var $ul = $leftMenu.find('>ul');
         var $liList = $ul.find('>li');
-        var $a = $li.find('>a');
+        var $a = $liList.find('>a');
         var $insideMenu = $liList.find('>ul.inside-menu');
 
         $liList.filter('.open').find('>ul.inside-menu').show();
