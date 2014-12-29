@@ -20,20 +20,20 @@ $(document).ready(function () {
             var $a = $(this);
             var $li = $a.closest('li');
             var $subUl = $li.find('ul');
+            
+            var currentOpen = false;
 
             $insideMenu.each(function () {
                 var $subUl = $(this);
                 var $parLi = $subUl.closest('li');
                 
-                if ($parLi.index() !== $li.index() && !$parLi.hasClass('open')) {
-                    $subUl.slideUp(500, function () { $parLi.removeClass('open'); });
-                }
+                if (!$parLi.hasClass('open')) return;
+                if ($parLi.index() === $li.index()) currentOpen = true;
+                $subUl.slideUp(500, function () { $parLi.removeClass('open'); });
             });
 
-            if (!$li.hasClass("open")) {
-                $liList.removeClass("open");
-                $subUl.slideDown(500);
-                $li.addClass("open");
+            if (!$li.hasClass("open") && !currentOpen) {
+                $subUl.slideDown(500, function () { $li.addClass("open"); });
             }
 
             return false;
