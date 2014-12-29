@@ -21,7 +21,14 @@ $(document).ready(function () {
             var $li = $a.closest('li');
             var $subUl = $li.find('ul');
 
-            $insideMenu.slideUp(500);
+            $insideMenu.each(function () {
+                var $subUl = $(this);
+                var $parLi = $subUl.closest('li');
+                
+                if ($parLi.index() !== $li.index()) {
+                    $subUl.slideUp(500, function () { $parLi.removeClass('open'); });
+                }
+            });
 
             if (!$li.hasClass("open")) {
                 $liList.removeClass("open");
