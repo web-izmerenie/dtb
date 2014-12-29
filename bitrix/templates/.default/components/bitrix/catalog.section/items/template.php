@@ -13,18 +13,18 @@ $FilterElement = CIBlockElement::GetList(array('PROPERTY_ATT_WEIGHT.VALUE'=>'ASC
  <div id="filter">
         <ul>
            <?if(empty($_GET['WEIGHT'])):?>
-            <li class="active"><a>Все</a></li>
+                <li class="active"><span>Все</span></li>
             <?else:?>
-            <li><a href="<?=$_SERVER['REDIRECT_URL']?>">Все</a></li>
+                <li><a href="<?=$_SERVER['REDIRECT_URL']?>">Все</a></li>
             <?endif?>
             <?foreach ($filter_value as $arFilter):?>
-<?if (empty($arFilter)) continue;?>
-<?if($_GET['WEIGHT'] == $arFilter):?>
-<li class="active"><span><?=$arFilter?> кг</span></li>
-<?else:?>
-<li><a href="?WEIGHT=<?=$arFilter?>"><?=$arFilter?> кг</a></li>
-<?endif?>
-<?endforeach?>
+                <?if (empty($arFilter)) continue;?>
+                    <?if($_GET['WEIGHT'] == $arFilter):?>
+                        <li class="active"><span><?=$arFilter?> кг</span></li>
+                    <?else:?>
+                        <li><a href="?WEIGHT=<?=$arFilter?>"><?=$arFilter?> кг</a></li>
+                    <?endif?>
+            <?endforeach?>
         </ul>
     </div>
 
