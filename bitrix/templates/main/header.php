@@ -11,8 +11,9 @@ if(CSite::InDir('/katalog/')) {
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-    <title>
-        <?$APPLICATION->ShowTitle()?></title>
+    <title><?$APPLICATION->ShowTitle()?></title>
+        <?$APPLICATION->ShowMeta("description")?>
+        <?$APPLICATION->ShowMeta("keywords")?>
     <link href="<?=$tplPath?>styles/build.css" rel="stylesheet">
     <script src="<?=$tplPath?>scripts/plugins/jquery-2.1.1.min.js" type="text/javascript"></script>
     <script src="<?=$tplPath?>scripts/main.js" type="text/javascript"></script>
