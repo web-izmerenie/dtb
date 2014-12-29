@@ -14,7 +14,7 @@ if(CSite::InDir('/katalog/')) {
     <title><?$APPLICATION->ShowTitle()?></title>
         <?$APPLICATION->ShowMeta("description")?>
         <?$APPLICATION->ShowMeta("keywords")?>
-    <link href="<?=$tplPath?>styles/build.css" rel="stylesheet">
+    <link href="<?=$tplPath?>styles/build/build.css" rel="stylesheet">
     <script src="<?=$tplPath?>scripts/plugins/jquery-2.1.1.min.js" type="text/javascript"></script>
     <script src="<?=$tplPath?>scripts/main.js" type="text/javascript"></script>
     <?if($USER->IsAuthorized()){?>
