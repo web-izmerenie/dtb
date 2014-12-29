@@ -1,3 +1,8 @@
+/**
+ * @author Andrey Chechkin
+ * @author Viacheslav Lotsmanov
+ */
+
 $(document).ready(function () {
     function topMenuSize() {
         var full_weight = 0;
