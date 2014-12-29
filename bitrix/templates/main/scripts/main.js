@@ -25,7 +25,7 @@ $(document).ready(function () {
                 var $subUl = $(this);
                 var $parLi = $subUl.closest('li');
                 
-                if ($parLi.index() !== $li.index()) {
+                if ($parLi.index() !== $li.index() && !$parLi.hasClass('open')) {
                     $subUl.slideUp(500, function () { $parLi.removeClass('open'); });
                 }
             });
