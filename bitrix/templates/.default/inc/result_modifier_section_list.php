@@ -70,7 +70,7 @@ $arResult['SECTIONS'] = $newList;
 $newList = array();
 $sortCallback = function ($list) {
     foreach ($list as $arItem) {
-        if (!empty($arItem['CHILDREN']) {
+        if (!empty($arItem['CHILDREN'])) {
             $arItem['CHILDREN'] = $sortCallback($arItem['CHILDREN']);
         }
         $newList[$arItem['SORT']] = $arItem;
