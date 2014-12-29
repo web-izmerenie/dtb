@@ -8,7 +8,7 @@
 	"TOP_DEPTH" => "3",
 	"SECTION_FIELDS" => array(
 		0 => "PICTURE",
-		1 => "",
+		1 => "SORT",
 	),
 	"SECTION_USER_FIELDS" => array(
 		0 => "UF_BIG_ELEMENT",
