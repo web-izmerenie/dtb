@@ -53,8 +53,23 @@ $(document).ready(function () {
                 .parents('div.tabs').find('div.box').eq($(this).index()).fadeIn(500).siblings('div.box').hide();
         })
     }
+	
+	function quest_form(){
+		function closeForm(){
+			$('.overload').hide();
+			$('#form_call').hide();
+			$('.ts-alert').hide();
+		}
+		$('#quest').click(function(){
+			$('.overload').show();
+			$('#form_call').show();
+		});
+		$('.overload').click(function(){closeForm();});
+		$('.close').click(function(){closeForm();});
+	}
 
     tabs();
     leftMenu();
     topMenuSize();
+	quest_form();
 });

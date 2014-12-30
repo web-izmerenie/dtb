@@ -1,3 +1,4 @@
+// out: ../build/build.css, compress: true, strictMath: true
 //import
 @import "pages/catalog-items.less";
 @import "pages/items.less";
@@ -404,6 +405,116 @@ body {
                 a{color: #fdd1aa;}
             }
         }
+    }
+    #form_call{
+        width: 390px;
+        height: 278px;
+        background: url("@{imgPrefix}body-bg.png") repeat;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin-left: -230px;
+        margin-top: -139px;
+        box-shadow: 0 0 20px #c1c1c1;
+        border-radius: 17px;
+        padding: 17px 35px;
+        color: #232323;
+        font-size: 15px;
+        z-index: 9999;
+        display: none;
+        .hidden_protection{display: none;}
+        h1{
+            color:#2a5d6b;
+            font-family: Zantrokeregular;
+            font-size: 20px;
+            text-align: center;
+            font-weight: normal;
+            padding-bottom: 23px;
+        }
+        .close{
+            background: url("@{imgPrefix}close.png") no-repeat;
+            width: 14px;
+            height: 13px;
+            display: block;
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            cursor: pointer;
+        }
+        .text_input{
+            padding-bottom: 10px;
+            input{
+                width: 220px;
+                height: 28px;
+                padding: 0 15px;
+                border: 1px solid #d3d3d3;
+            }
+        }
+        label{
+                width: 80px;
+                display: block;
+                float: left;
+            }
+        .text-area{
+            textarea{
+                width: 270px;
+                height: 87px;
+                border: 1px solid #d3d3d3;
+                resize: none;
+                padding: 10px;
+            }
+        }
+        .api-submit{
+            input{
+                display: block;
+                background: #094455;
+                color: #FFF;
+                font-size: 15px;
+                font-weight: bold;
+                text-align: center;
+                border: none;
+                padding: 10px;
+                cursor: pointer;
+                border-radius: 22px;
+                margin: 10px auto;
+            }
+
+        }
+    }
+    .ts-alert{
+        background: url("@{imgPrefix}body-bg.png") repeat;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-left: -230px;
+        box-shadow: 0 0 20px #c1c1c1;
+        border-radius: 17px;
+        padding: 17px 35px;
+        width: 390px;
+        text-align: center;
+        color: #FB1111;
+        font-size: 15px;
+        .close{
+            background: url("@{imgPrefix}close.png") no-repeat;
+            width: 14px;
+            height: 13px;
+            display: block;
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            cursor: pointer;
+        }
+    }
+    .ts-alert-success{
+        color: #37B634 !important;
+    }
+    .overload{
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        background: rgba(255, 255, 255, 0.5);
+        top: 0;
+        display: none;
     }
     }//body
 }//html
