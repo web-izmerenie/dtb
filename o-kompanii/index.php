@@ -1,20 +1,47 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("О компании");
-?><p>
-	 Магазин «Строительные материалы» на&nbsp;Фермерской открыт в&nbsp;2003&nbsp;году. Приоритетное направление: пластиковые панели, которые в&nbsp;2000-х становятся все более популярными благодаря универсальному способу отделки, разнообразию текстур и&nbsp;фактур, а&nbsp;также богатой цветовой палитре. <br>
-	 В&nbsp;последующие годы ассортимент был расширен: гипсокартон, ламинат-пол, сантехника, электрика, плитка, двери, утеплитель, кровельные материалы и&nbsp;т.&nbsp;д.
-</p>
-<p>
-	 Мы&nbsp;работаем как с&nbsp;оптовыми, так и&nbsp;с&nbsp;розничными покупателями. Допустимы наличная и&nbsp;безналичная формы оплаты.<br>
-	 В&nbsp;каждой товарной категории присутствуют как недорогие марки и&nbsp;товары среднего ценового сегмента, так и&nbsp;бренды премиум&nbsp;— класса. У&nbsp;нас&nbsp;Вы сможете приобрести всё необходимое для ремонта и&nbsp;строительства на&nbsp;любой бюджет и&nbsp;кошелек.
-</p>
-<p>
-	 Огромное внимание уделяется качеству. В&nbsp;магазине предоставят Вам полную и&nbsp;достоверную информацию о&nbsp;товаре, профессионально проконсультируют о&nbsp;принципиальных отличиях того или иного варианта. Мы&nbsp;поможем Вам выбрать именно тот товар, который полностью удовлетворит все Ваши потребности. Отслеживание изменений происходящих на&nbsp;рынке строительных материалов позволяет своевременно предлагать новинки отрасли.
-</p>
-<p>
-	 Индивидуальный и&nbsp;доброжелательный подход&nbsp;— это норма для нашего коллектива. Мы&nbsp;благодарны тем, кто приходит к&nbsp;нам снова и&nbsp;снова и&nbsp;рекомендует посетить наш магазин своим родственникам и&nbsp;знакомым.<br>
-	 Доставка товара осуществляется в&nbsp;удобное для Вас время. Возможен также заказ товара по&nbsp;телефону. Если нужного товара в&nbsp;необходимом количестве в&nbsp;данный момент не&nbsp;оказалось в&nbsp;наличии, то&nbsp;его всегда возможно приобрести под заказ. Сроки поставки могут составить от&nbsp;нескольких часов до&nbsp;нескольких дней.
-</p>
-<h2>
-Приходите, звоните, пишите, мы&nbsp;всегда Вам рады! </h2><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
+?><?$APPLICATION->IncludeComponent(
+	"bitrix:news.detail",
+	"",
+	Array(
+		"IBLOCK_TYPE" => "dtb",
+		"IBLOCK_ID" => "6",
+		"ELEMENT_ID" => "16",
+		"ELEMENT_CODE" => "",
+		"CHECK_DATES" => "Y",
+		"FIELD_CODE" => array("","undefined",""),
+		"PROPERTY_CODE" => array("","undefined",""),
+		"IBLOCK_URL" => "",
+		"AJAX_MODE" => "N",
+		"AJAX_OPTION_JUMP" => "N",
+		"AJAX_OPTION_STYLE" => "Y",
+		"AJAX_OPTION_HISTORY" => "N",
+		"CACHE_TYPE" => "A",
+		"CACHE_TIME" => "36000000",
+		"CACHE_GROUPS" => "Y",
+		"SET_TITLE" => "N",
+		"SET_BROWSER_TITLE" => "N",
+		"BROWSER_TITLE" => "-",
+		"SET_META_KEYWORDS" => "N",
+		"META_KEYWORDS" => "-",
+		"SET_META_DESCRIPTION" => "N",
+		"META_DESCRIPTION" => "-",
+		"SET_STATUS_404" => "N",
+		"INCLUDE_IBLOCK_INTO_CHAIN" => "N",
+		"ADD_SECTIONS_CHAIN" => "N",
+		"ADD_ELEMENT_CHAIN" => "N",
+		"ACTIVE_DATE_FORMAT" => "d.m.Y",
+		"USE_PERMISSIONS" => "N",
+		"DISPLAY_DATE" => "N",
+		"DISPLAY_NAME" => "N",
+		"DISPLAY_PICTURE" => "N",
+		"DISPLAY_PREVIEW_TEXT" => "N",
+		"USE_SHARE" => "N",
+		"PAGER_TEMPLATE" => ".default",
+		"DISPLAY_TOP_PAGER" => "N",
+		"DISPLAY_BOTTOM_PAGER" => "N",
+		"PAGER_TITLE" => "Страница",
+		"PAGER_SHOW_ALL" => "N"
+	)
+);?><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

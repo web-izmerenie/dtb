@@ -12,11 +12,10 @@
             <a href="mailto:dttri@aaanet.ru">dttri@aaanet.ru</a>
         </div>
         <div class="footer-block">
-            <p><i><span>Телефоны:</span></i>
-                8 (928) 279-65-44
-                <br>8 (863) 247-10-54 <i>— бухгалтерия</i>
-                <br>8 (863-54) 6-27-11 <i>— торговый зал</i>
-            </p>
+            <i><span>Телефоны:</span></i>
+            <p>8 (928) 279-65-44</p>
+                <p>8 (863) 247-10-54 <i>— бухгалтерия</i></p>
+                <p>8 (863-54) 6-27-11 <i>— торговый зал</i></p>
         </div>
         <div class="footer-block">
             <p><i><span>Тел./Факс:</span></i>

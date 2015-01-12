@@ -9,7 +9,7 @@ if(CSite::InDir('/katalog/')) {
 <html class="main">
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width; initial-scale=0.32; maximum-scale=1; user-scalable=1;" />
     <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
     <title><?$APPLICATION->ShowTitle()?></title>
         <?$APPLICATION->ShowMeta("description")?>
